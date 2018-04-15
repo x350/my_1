@@ -1,3 +1,5 @@
+import os
+
 # cook_book = {
 #   'яйчница': [
 #     {'ingridient_name': 'яйца', 'quantity': 2, 'measure': 'шт.'},
@@ -35,12 +37,16 @@ def load_cook_book(file):
 
 
 
+my_dir = os.path.dirname(__file__)
+my_file = "cook_book.txt"
+file_path = os.path.join(my_dir, my_file)
+
 # cook_book = load_cook_book('/home/x350/git/cook_book.txt')
 # print(cook_book["Омлет"])
 #
 def get_shop_list_by_dishes(dishes, person_count):
   shop_list = {}
-  cook_book = load_cook_book('/home/x350/git/cook_book.txt')
+  cook_book = load_cook_book(file_path)
 
 
   for dish in dishes:
