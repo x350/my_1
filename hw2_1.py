@@ -21,7 +21,7 @@ import os
 
 def load_cook_book(file):
     cook_book = {}
-    with open(file) as f:
+    with open(file, encoding='utf8') as f:
         for l in f:
             line = l.strip().lower()
             cook_book[line] = []
